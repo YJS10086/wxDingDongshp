@@ -1,0 +1,62 @@
+/* pages/category/index.wxss */
+page{
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.cates{
+    margin-top: 90rpx;
+    height: 100%;
+    width: 750rpx;
+    .cates_container{
+        // less编译calc会出现问题
+        height: 100%;
+        width: 100%;
+        display: flex;
+        .left_menu{
+            flex: 2; 
+           .menu_item{
+            height: 80rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30rpx;
+           }
+        }
+        .right_content{
+            flex:5;
+            .content_top{
+                padding: 15rpx 10rpx;
+                border-bottom: 1rpx solid #aca9a7;
+                height: 75rpx;
+                display: flex;
+                align-items: center;
+                overflow-y: hidden;
+                flex-wrap: nowrap;
+                view{
+                    // border: 1rpx solid #aca9a7;
+                    // border-radius: 40rpx;
+                    flex-shrink:0;
+                    
+                    font-size: 28rpx;
+                    padding: 4rpx 10rpx;
+                }
+            }
+            .content_shop{
+                display: flex;
+                width: 200rpx;
+                .content_shop_image{
+                    width: 50rpx;
+                    height: 50rpx;
+                    image{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+

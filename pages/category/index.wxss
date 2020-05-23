@@ -1,0 +1,55 @@
+/* pages/category/index.wxss */
+page {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.cates {
+  margin-top: 90rpx;
+  height: 100%;
+  width: 750rpx;
+}
+.cates .cates_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.cates .cates_container .left_menu {
+  flex: 2;
+}
+.cates .cates_container .left_menu .menu_item {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.cates .cates_container .right_content {
+  flex: 5;
+}
+.cates .cates_container .right_content .content_top {
+  padding: 15rpx 10rpx;
+  border-bottom: 1rpx solid #aca9a7;
+  height: 75rpx;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+.cates .cates_container .right_content .content_top view {
+  flex-shrink: 0;
+  font-size: 28rpx;
+  padding: 4rpx 10rpx;
+}
+.cates .cates_container .right_content .content_shop {
+  display: flex;
+  width: 200rpx;
+}
+.cates .cates_container .right_content .content_shop .content_shop_image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.cates .cates_container .right_content .content_shop .content_shop_image image {
+  width: 100%;
+  height: 100%;
+}

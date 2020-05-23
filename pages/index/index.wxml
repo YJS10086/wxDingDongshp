@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view class="pyg_index">
+<!-- 搜索框 -->
+  <SearInput></SearInput>
+<!-- 轮播图 -->
+<view class="index_swiper" hover-class="none" hover-stop-propagation="false">
+  <swiper autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}">
+    <swiper-item  wx:for="{{swiperList}}" wx:key="index">
+      <navigator >
+        <!-- 图片标签
+        mode属性
+          widthFix 让图片的标签宽高和图片标签的内容的宽高都等比例发生变化
+        
+        -->
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 导航栏 -->
+<view class="index_cate" hover-class="none" hover-stop-propagation="false">
+  <navigator wx:for="{{catesList}}" wx:key="name">
+    <image   src="{{item.image_src}}" />
+    <label >{{item.name}}</label>
+  </navigator>
+</view>
+<!-- 隔断 -->
+<view class="index_Geduan"></view>
+<!-- 限时抢购 -->
+<view class="index_Goods">
+  <view class="index_Goods_top">
+    <text >限时抢购</text>
+      <view class="time">01</view>:
+      <view class="time">30</view>:
+      <view class="time">30</view>
+      <navigator >更多</navigator>
+  </view>
+  <view class="index_Goods_button">
+    <navigator class="index_Goods_shop" wx:for="{{GoodsList}}" wx:key="{{item.name}}">
+      <image mode="widthFix" src="{{item.image_src}}" />
+        <view class="GoodsList">
+            <text >{{item.name}}</text>
+            <text >{{item.unit}}</text>
+            <text >￥{{item.price}} </text>
+            <text >￥{{item.oldprice}}</text>
+            <view class="goshop" >
+                <image src="{{item.image_src}}" />
+            </view>
+        </view>
+    </navigator> 
+  </view>
+</view>
+<!-- 隔断 -->
+<view class="index_Geduan"></view>
+
+<view class="index_shops" >
+  <view class="index_shops_top">
+    <text >猜你喜欢</text>
+  </view>
+  <navigator  class="index_shops_list" wx:for="{{GoodsList}}" wx:key="{{item.name}}">
+      <view class="shops_list" >
+        <image src="{{item.image_src}}" mode="widthFix" ></image>
+        <text >{{item.name}}</text>
+        <text >{{item.unit}}</text>
+        <text >￥{{item.price}} </text>
+          <view class="goshop" >
+              <image src="{{item.image_src}}" />
+          </view>
+      </view>    
+  </navigator>
+
+
+
+</view>
+
+
+<view style="height:1000rpx"> </view>
+
+</view>

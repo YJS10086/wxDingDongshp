@@ -1,0 +1,156 @@
+/**index.wxss**/
+.index_swiper {
+  margin-top: 90rpx;
+}
+.index_swiper swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.index_swiper swiper image {
+  width: 100%;
+}
+.index_cate {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  height: 280rpx;
+}
+.index_cate navigator {
+  padding: 10rpx;
+  height: 50%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.index_cate navigator image {
+  width: 100rpx;
+  border-radius: 50%;
+}
+.index_cate navigator label {
+  font-size: 25rpx;
+}
+.index_Geduan {
+  width: 100%;
+  height: 20rpx;
+  background-color: #ecebeb;
+}
+.index_Goods {
+  height: 350rpx;
+}
+.index_Goods .index_Goods_top {
+  margin: 10rpx 10rpx 0 10rpx;
+  height: 70rpx;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.index_Goods .index_Goods_top text {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.index_Goods .index_Goods_top .time {
+  background-color: black;
+  color: white;
+  margin: 0 10rpx;
+  width: 40rpx;
+  text-align: center;
+}
+.index_Goods .index_Goods_top navigator {
+  position: absolute;
+  right: 0;
+  color: green;
+}
+.index_Goods .index_Goods_top::before {
+  content: "";
+  background-color: green;
+  width: 5rpx;
+  height: 60%;
+  margin: 0 10rpx;
+}
+.index_Goods .index_Goods_button {
+  height: 80%;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.index_Goods .index_Goods_button image {
+  width: 150rpx;
+  margin: 0 auto;
+}
+.index_Goods .index_Goods_button .index_Goods_shop {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 200rpx;
+  height: 100%;
+  font-size: 25rpx;
+}
+.GoodsList {
+  position: relative;
+  margin: 0 auto;
+  width: 150rpx;
+}
+.GoodsList text:nth-child(3) {
+  color: green;
+}
+.GoodsList text:nth-child(4) {
+  text-decoration: line-through;
+  font-size: 20rpx;
+}
+.GoodsList .goshop {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.GoodsList .goshop image {
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+}
+.index_shops .index_shops_top {
+  margin: 10rpx 10rpx 0 10rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+}
+.index_shops .index_shops_top text {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.index_shops .index_shops_top::before {
+  content: "";
+  background-color: green;
+  width: 5rpx;
+  height: 60%;
+  margin: 0 10rpx;
+}
+.index_shops .index_shops_list {
+  float: left;
+  width: 50%;
+  height: 350rpx;
+  border: 1px solid gray;
+}
+.index_shops .index_shops_list .shops_list {
+  margin-top: 1%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.index_shops .index_shops_list .shops_list image {
+  margin: 0 auto;
+  width: 250rpx;
+  height: 250rpx;
+}
+.index_shops .index_shops_list .shops_list .goshop {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.index_shops .index_shops_list .shops_list .goshop image {
+  width: 50rpx;
+  height: 50rpx;
+}

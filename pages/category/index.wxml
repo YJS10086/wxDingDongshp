@@ -1,0 +1,37 @@
+<!--pages/category/index.wxml-->
+<view class="cates" >
+    <!-- 搜索框 -->
+  <SearInput></SearInput>
+  <view class="cates_container">
+    <!-- 左侧 -->
+        <scroll-view scroll-y class="left_menu"  > 
+            <view class="menu_item" wx:for="{{category_left}}" wx:key="{{goods_id}}">
+              {{item.name}}
+            </view>
+        </scroll-view>
+    <!-- 右侧 -->
+        <scroll-view scroll-y class="right_content">
+          <view class="content_top" >
+            <view 
+            wx:for="{{concent_top}}"
+            wx:key="{{item.name}}">
+            {{item.name}}
+            </view>
+          </view>
+          <view class="content_shop" wx:for="{{concent_top}}"
+            wx:key="{{item.name}}">
+            <view >{{item.name}}</view>
+            <navigator >
+              <view class="content_shop_image"><image  src="{{}}"/></view>
+              <view >
+                <text >{{}}</text>
+                <text >{{}}</text>
+                <text >{{}}</text>
+                <text >{{}}</text>
+                <text >{{}}</text>
+              </view>
+            </navigator>
+          </view>
+        </scroll-view>
+      </view>
+</view>

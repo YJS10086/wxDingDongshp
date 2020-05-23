@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "SearInput":"../../components/SearchInput/SearInput"
+  },
+  "navigationBarTitleText": "首页"
+}
