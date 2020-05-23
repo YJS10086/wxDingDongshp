@@ -18,19 +18,27 @@
             {{item.name}}
             </view>
           </view>
-          <view class="content_shop" wx:for="{{concent_top}}"
-            wx:key="{{item.name}}">
-            <view >{{item.name}}</view>
-            <navigator >
-              <view class="content_shop_image"><image  src="{{}}"/></view>
-              <view >
-                <text >{{}}</text>
-                <text >{{}}</text>
-                <text >{{}}</text>
-                <text >{{}}</text>
-                <text >{{}}</text>
+          <view class="content_shop">
+          <!-- 标题 -->
+          <view   wx:for="{{concent_top}}"
+            wx:key="{{item1.id}}" wx:for-item="item1">
+            <view  class="shoplist_title">
+            {{item1.name}}</view>
+            <!-- 内容 -->
+            <view class="content_shoplist">
+            <navigator class="shoplist" wx:for="{{item1.GoodsList}}" wx:for-index="index2" wx:for-item="item2">
+              <view class="shop_image">
+                <image mode="widthFix" src="{{item2.image_src}}"/>
+              </view>
+              <view class="shop_content">
+                <text >{{item2.name}}</text>
+                <text >{{item2.unit}}</text>
+                <text >{{item2.price}}</text>
+                <text >{{item2.oldprice}}</text>
               </view>
             </navigator>
+            </view>
+          </view>
           </view>
         </scroll-view>
       </view>

@@ -10,7 +10,7 @@ Page({
     category_left:[
       {
         name:"安心蔬菜",
-        goods_id:1
+        goods_id:1,
       },
       {
         name:"豆制品",
@@ -68,71 +68,81 @@ Page({
     // 右侧头部数据
     concent_top:[
       {
-        name:"全部"
+        name:"全部",
+        id:0,
+        GoodsList:[
+          {
+            image_src:"../../image/1.PNG",
+            name:"鲜活多宝鱼",
+            unit:"450g以上",
+            price:"25.80",
+            oldprice:"26.40"
+          },{
+            image_src:"../../image/1.PNG",
+            name:"鲜活多宝鱼",
+            unit:"450g以上",
+            price:"25.80",
+            oldprice:"26.40"
+          },{
+            image_src:"../../image/1.PNG",
+            name:"鲜活多宝鱼",
+            unit:"450g以上",
+            price:"25.80",
+            oldprice:"26.40"
+          },{
+            image_src:"../../image/1.PNG",
+            name:"鲜活多宝鱼",
+            unit:"450g以上",
+            price:"25.80",
+            oldprice:"26.40"
+          },{
+            image_src:"../../image/1.PNG",
+            name:"鲜活多宝鱼",
+            unit:"450g以上",
+            price:"25.80",
+            oldprice:"26.40"
+          },{
+            image_src:"../../image/1.PNG",
+            name:"鲜活多宝鱼",
+            unit:"450g以上",
+            price:"25.80",
+            oldprice:"26.40"
+          },{
+            image_src:"../../image/1.PNG",
+            name:"鲜活多宝鱼",
+            unit:"450g以上",
+            price:"25.80",
+            oldprice:"26.40"
+          }
+        ]
       },{
-        name:"推荐"
+        name:"推荐",
+        id:1
       },{
-        name:"新品"
+        name:"新品",
+        id:2
       },{
-        name:"评价好菜"
+        name:"评价好菜",
+        id:3
       },{
-        name:"崇明蔬菜"
+        name:"崇明蔬菜",
+        id:4
       },{
-        name:"叶菜类"
+        name:"叶菜类",
+        id:5
       },{
-        name:"挂果类"
+        name:"挂果类",
+        id:6
       },{
-        name:"净菜"
+        name:"净菜",
+        id:7
       },{
-        name:"球精类"
+        name:"球精类",
+        id:8
       },
     ],
     //商品数据
-    GoodsList:[
-      {
-        image_src:"../../image/1.PNG",
-        name:"鲜活多宝鱼",
-        unit:"450g以上",
-        price:"25.80",
-        oldprice:"26.40"
-      },{
-        image_src:"../../image/1.PNG",
-        name:"鲜活多宝鱼",
-        unit:"450g以上",
-        price:"25.80",
-        oldprice:"26.40"
-      },{
-        image_src:"../../image/1.PNG",
-        name:"鲜活多宝鱼",
-        unit:"450g以上",
-        price:"25.80",
-        oldprice:"26.40"
-      },{
-        image_src:"../../image/1.PNG",
-        name:"鲜活多宝鱼",
-        unit:"450g以上",
-        price:"25.80",
-        oldprice:"26.40"
-      },{
-        image_src:"../../image/1.PNG",
-        name:"鲜活多宝鱼",
-        unit:"450g以上",
-        price:"25.80",
-        oldprice:"26.40"
-      },{
-        image_src:"../../image/1.PNG",
-        name:"鲜活多宝鱼",
-        unit:"450g以上",
-        price:"25.80",
-        oldprice:"26.40"
-      },{
-        image_src:"../../image/1.PNG",
-        name:"鲜活多宝鱼",
-        unit:"450g以上",
-        price:"25.80",
-        oldprice:"26.40"
-      }
-    ]
+    
 
   },
 

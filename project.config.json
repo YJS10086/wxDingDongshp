@@ -17,7 +17,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
 	"appid": "wx5d0c30e636a44abe",
-	"projectname": "1",
+	"projectname": "wxDingDong",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
