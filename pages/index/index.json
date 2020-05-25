@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "SearInput":"../../components/SearchInput/SearInput"
+    "SearInput":"../../components/SearchInput/SearInput",
+    "GoodsList":"../../components/Goodslist/GoodsList"
   },
   "navigationBarTitleText": "首页"
 }

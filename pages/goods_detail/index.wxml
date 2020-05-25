@@ -1,0 +1,13 @@
+<!--pages/goos_detail/index.wxml-->
+<view class="detail_swiper">
+    <swiper 
+    autoplay="{{true}}"
+    circular="{{true}}"
+    indicator-dots="{{true}}">
+        <swiper-item 
+        wx:for="{{}}"
+        wx:key="">
+            <image mode="widthFix" src="{{}}"/>
+        </swiper-item>
+    </swiper>
+</view>

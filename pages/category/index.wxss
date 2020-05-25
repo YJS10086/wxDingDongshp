@@ -23,9 +23,28 @@ page {
   justify-content: center;
   align-items: center;
   font-size: 30rpx;
+  position: relative;
+}
+.cates .cates_container .left_menu .active {
+  color: var(--themeColor);
+}
+.cates .cates_container .left_menu .active::before {
+  content: "";
+  height: 60%;
+  background-color: green;
+  width: 10rpx;
+  position: absolute;
+  left: 5rpx;
 }
 .cates .cates_container .right_content {
   width: 75%;
+}
+.cates .cates_container .right_content .active {
+  margin-top: 90rpx;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: white;
 }
 .cates .cates_container .right_content .content_top {
   padding: 15rpx 10rpx;

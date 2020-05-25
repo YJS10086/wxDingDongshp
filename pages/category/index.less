@@ -21,11 +21,31 @@ page{
             justify-content: center;
             align-items: center;
             font-size: 30rpx;
+            position: relative;
+           }
+           .active{
+               color: var(--themeColor);
+            //    border-left: 5rpx solid green;
+               &::before{
+                   content: "";
+                   height: 60%;
+                   background-color: green;
+                   width: 10rpx;
+                   position: absolute;
+                   left: 5rpx;
+               }
            }
         }
         .right_content{
             width: 75%;
             //右上
+            .active{
+                margin-top: 90rpx;
+                position: fixed;
+                top: 0;
+                z-index: 1;
+                background-color: white;
+            }
             .content_top{
                 padding: 15rpx 10rpx;
                 border-bottom: 1rpx solid #aca9a7;

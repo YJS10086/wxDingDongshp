@@ -1,5 +1,6 @@
 //Page Object
 import { request } from "../../request/index.js";
+
 Page({
   data: {
     //轮播图数组
@@ -15,61 +16,71 @@ Page({
     // 导航数组
     catesList:[
       {
-        name:"分类",
+        goods_id:1,
+        name:"安心蔬菜",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:2,
+        name:"豆制品",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:3,
+        name:"新鲜水果",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:4,
+        name:"肉禽蛋",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:5,
+        name:"海鲜水产",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:6,
+        name:"陆品烘烤",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:7,
+        name:"营养早餐",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:8,
+        name:"营养早餐",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:9,
+        name:"营养早餐",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
       },
       {
-        name:"分类",
+        goods_id:10,
+        name:"营养早餐",
         image_src:"../../image/1.PNG",
         open_type:"swichTab",
         navigator_url:"/pages/category/index"
@@ -82,43 +93,50 @@ Page({
         name:"鲜活多宝鱼",
         unit:"450g以上",
         price:"25.80",
-        oldprice:"26.40"
+        oldprice:"26.40",
+        goods_id:1
       },{
         image_src:"../../image/1.PNG",
         name:"鲜活多宝鱼",
         unit:"450g以上",
         price:"25.80",
-        oldprice:"26.40"
+        oldprice:"26.40",
+        goods_id:2
       },{
         image_src:"../../image/1.PNG",
         name:"鲜活多宝鱼",
         unit:"450g以上",
         price:"25.80",
-        oldprice:"26.40"
+        oldprice:"26.40",
+        goods_id:3
       },{
         image_src:"../../image/1.PNG",
         name:"鲜活多宝鱼",
         unit:"450g以上",
         price:"25.80",
-        oldprice:"26.40"
+        oldprice:"26.40",
+        goods_id:4
       },{
         image_src:"../../image/1.PNG",
         name:"鲜活多宝鱼",
         unit:"450g以上",
         price:"25.80",
-        oldprice:"26.40"
+        oldprice:"26.40",
+        goods_id:5
       },{
         image_src:"../../image/1.PNG",
         name:"鲜活多宝鱼",
         unit:"450g以上",
         price:"25.80",
-        oldprice:"26.40"
+        oldprice:"26.40",
+        goods_id:6
       },{
         image_src:"../../image/1.PNG",
         name:"鲜活多宝鱼",
         unit:"450g以上",
         price:"25.80",
-        oldprice:"26.40"
+        oldprice:"26.40",
+        goods_id:7
       }
     ]
   },
@@ -146,7 +164,7 @@ Page({
     request({url:""})
     .then(result=>{
            this.setData({
-          swiperList:result.data.message
+          swiperList:result
         })
     })
   },
@@ -154,7 +172,7 @@ Page({
     request({url:""})
     .then(result=>{
            this.setData({
-            catesList:result.data.message
+            catesList:result
         })
     })
   },
@@ -162,7 +180,7 @@ Page({
     request({url:""})
     .then(result=>{
            this.setData({
-            floorList:result.data.message
+            floorList:result
         })
     })
   },

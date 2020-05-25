@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "SearInput":"../../components/SearchInput/SearInput",
+    "Tabs":"../../components/Tabs/tabs",
+    "GoodsList":"../../components/Goodslist/GoodsList"
+},
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh": true,
+  "backgroundColor":"light"
 }

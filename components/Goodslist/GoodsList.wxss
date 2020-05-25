@@ -1,0 +1,29 @@
+/* components/Goodslist/GoodsList.wxss */
+.index_shops_list {
+  float: left;
+  width: 50%;
+  height: 350rpx;
+  border: 1px solid gray;
+}
+.index_shops_list .shops_list {
+  margin-top: 1%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.index_shops_list .shops_list image {
+  margin: 0 auto;
+  width: 250rpx;
+  height: 250rpx;
+}
+.index_shops_list .shops_list .goshop {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.index_shops_list .shops_list .goshop image {
+  width: 50rpx;
+  height: 50rpx;
+}

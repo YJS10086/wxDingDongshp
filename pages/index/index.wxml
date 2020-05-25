@@ -19,7 +19,10 @@
 </view>
 <!-- 导航栏 -->
 <view class="index_cate" hover-class="none" hover-stop-propagation="false">
-  <navigator wx:for="{{catesList}}" wx:key="name">
+  <navigator 
+  wx:for="{{catesList}}" 
+  wx:key="name"
+  >
     <image   src="{{item.image_src}}" />
     <label >{{item.name}}</label>
   </navigator>
@@ -36,7 +39,11 @@
       <navigator >更多</navigator>
   </view>
   <view class="index_Goods_button">
-    <navigator class="index_Goods_shop" wx:for="{{GoodsList}}" wx:key="{{item.name}}">
+    <navigator 
+    class="index_Goods_shop" 
+    wx:for="{{GoodsList}}" 
+    wx:key="{{item.name}}"
+    url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
       <image mode="widthFix" src="{{item.image_src}}" />
         <view class="GoodsList">
             <text >{{item.name}}</text>
@@ -57,20 +64,8 @@
   <view class="index_shops_top">
     <text >猜你喜欢</text>
   </view>
-  <navigator  class="index_shops_list" wx:for="{{GoodsList}}" wx:key="{{item.name}}">
-      <view class="shops_list" >
-        <image src="{{item.image_src}}" mode="widthFix" ></image>
-        <text >{{item.name}}</text>
-        <text >{{item.unit}}</text>
-        <text >￥{{item.price}} </text>
-          <view class="goshop" >
-              <image src="{{item.image_src}}" />
-          </view>
-      </view>    
-  </navigator>
-
-
-
+  <!-- 商品列表 -->
+  <GoodsList GoodsList="{{GoodsList}}"></GoodsList>
 </view>
 
 

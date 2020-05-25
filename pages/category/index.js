@@ -1,11 +1,16 @@
 // pages/category/index.js
 import {request} from "../../request/index.js";
+import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    active:false,
+    
+    //被点击de菜单
+    currentIndex:0,
     // 左侧数据
     category_left:[
       {
@@ -38,31 +43,15 @@ Page({
       },
       {
         name:"营养早餐",
-        goods_id:7
+        goods_id:8
       },
       {
         name:"营养早餐",
-        goods_id:7
+        goods_id:9
       },
       {
         name:"营养早餐",
-        goods_id:7
-      },
-      {
-        name:"营养早餐",
-        goods_id:7
-      },
-      {
-        name:"营养早餐",
-        goods_id:7
-      },
-      {
-        name:"营养早餐",
-        goods_id:7
-      },
-      {
-        name:"营养早餐",
-        goods_id:7
+        goods_id:10
       }
     ],
     // 右侧头部数据
@@ -76,43 +65,50 @@ Page({
             name:"鲜活多宝鱼",
             unit:"450g以上",
             price:"25.80",
-            oldprice:"26.40"
+            oldprice:"26.40",
+            cat_id:1
           },{
             image_src:"../../image/1.PNG",
             name:"鲜活多宝鱼",
             unit:"450g以上",
             price:"25.80",
-            oldprice:"26.40"
+            oldprice:"26.40",
+            cat_id:2
           },{
             image_src:"../../image/1.PNG",
             name:"鲜活多宝鱼",
             unit:"450g以上",
             price:"25.80",
-            oldprice:"26.40"
+            oldprice:"26.40",
+            cat_id:3
           },{
             image_src:"../../image/1.PNG",
             name:"鲜活多宝鱼",
             unit:"450g以上",
             price:"25.80",
-            oldprice:"26.40"
+            oldprice:"26.40",
+            cat_id:4
           },{
             image_src:"../../image/1.PNG",
             name:"鲜活多宝鱼",
             unit:"450g以上",
             price:"25.80",
-            oldprice:"26.40"
+            oldprice:"26.40",
+            cat_id:5
           },{
             image_src:"../../image/1.PNG",
             name:"鲜活多宝鱼",
             unit:"450g以上",
             price:"25.80",
-            oldprice:"26.40"
+            oldprice:"26.40",
+            cat_id:6
           },{
             image_src:"../../image/1.PNG",
             name:"鲜活多宝鱼",
             unit:"450g以上",
             price:"25.80",
-            oldprice:"26.40"
+            oldprice:"26.40",
+            cat_id:7
           }
         ]
       },{
@@ -141,64 +137,70 @@ Page({
         id:8
       },
     ],
-    //商品数据
-    
-
+    //右侧内容靠顶部的距离
+    scrolltop:0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  Cates:[],
+  onLoad:function(){
+    //使用缓存技术
+    const Cates=wx.getStorageSync("cates");
+    if(!Cates){
+      //不存在，请求数据
+      this.getCates();
+    }else{
+      //有旧的数据 10s
+      if(Date.now()-Cates.times>1000*10){
+        this.getCates();
+      }else{
+        this.Cates=Cates.data
+        let category_left=this.Cates.map(v=>v.cat_name);
+        let concent_top =this.Cates[0].children;
+        this.setData({
+          category_left,
+          concent_top
+        })
+      }
+    }
   },
+  async getCates(){
+    // request({
+    //   url:""
+    // })
+    // .then(res=>{
+    //   this.Cates=res.data.message;
+    //   wx.setStorageSync("cates", {time:Data.now(),data:this.Cates});
+    //   //获取数据
+    //   let category_left=this.Cates.map(v=>v.cat_name);
+    //   let concent_top =this.Cates[0].children;
+    //   this.setData({
+    //     category_left,
+    //     concent_top
+    //   })
+    // })
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
+    //使用es7的async await异步
+    const res =await request({url:""});
+    this.Cates=res;
+      wx.setStorageSync("cates", {time:Data.now(),data:this.Cates});
+      //获取数据
+      let category_left=this.Cates.map(v=>v.cat_name);
+      let concent_top =this.Cates[0].children;
+      this.setData({
+        category_left,
+        concent_top
+      })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //左侧菜单点击事件
+  bandleItemTap(e){
+    let A ={}
+    A =e.currentTarget.dataset.index;
+      // let concent_top =this.Cates[A].children;
+      this.setData({
+        currentIndex:A,
+        // concent_top,
+        //设置右侧距离
+        scrolltop:0
+      })
   }
 })

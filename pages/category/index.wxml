@@ -5,28 +5,36 @@
   <view class="cates_container">
     <!-- 左侧 -->
         <scroll-view scroll-y class="left_menu"  > 
-            <view class="menu_item" wx:for="{{category_left}}" wx:key="{{goods_id}}">
+            <view class="menu_item {{index===currentIndex?'active':''}}" 
+            wx:for="{{category_left}}" 
+            wx:key="*this"
+            bindtap="bandleItemTap"
+            data-index="{{index}}">
               {{item.name}}
             </view>
         </scroll-view>
     <!-- 右侧 -->
-        <scroll-view scroll-y class="right_content">
-          <view class="content_top" >
+        <scroll-view scroll-y scroll-top="{{scrolltop}}"  class="right_content">
+          <view class="content_top {{active==true ? 'active':''}}" >
             <view 
             wx:for="{{concent_top}}"
-            wx:key="{{item.name}}">
+            wx:key="name">
             {{item.name}}
             </view>
           </view>
           <view class="content_shop">
           <!-- 标题 -->
           <view   wx:for="{{concent_top}}"
-            wx:key="{{item1.id}}" wx:for-item="item1">
+            wx:key="id" wx:for-item="item1">
             <view  class="shoplist_title">
             {{item1.name}}</view>
             <!-- 内容 -->
             <view class="content_shoplist">
-            <navigator class="shoplist" wx:for="{{item1.GoodsList}}" wx:for-index="index2" wx:for-item="item2">
+            <navigator class="shoplist" wx:for="{{item1.GoodsList}}" 
+            wx:for-index="index2" 
+            wx:for-item="item2"
+            wx:key="index2"
+            url="/pages/goods_list/index?cid={{item2.cat_id}}">
               <view class="shop_image">
                 <image mode="widthFix" src="{{item2.image_src}}"/>
               </view>
