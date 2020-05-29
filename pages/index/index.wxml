@@ -22,8 +22,10 @@
   <navigator 
   wx:for="{{catesList}}" 
   wx:key="name"
+  open-type="switchTab"
+  url="/pages/category/index"
   >
-    <image   src="{{item.image_src}}" />
+    <image mode="widthFix"  src="{{item.image_src}}" />
     <label >{{item.name}}</label>
   </navigator>
 </view>

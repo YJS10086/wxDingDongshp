@@ -1,0 +1,119 @@
+/* pages/goos_detail/index.wxss */
+.detail_swiper{
+    box-shadow:0 -5rpx 10rpx #666;
+    swiper{
+        height: 60vw;
+        text-align: center;
+        image{
+            width: 60%;
+        }
+    }
+}
+.goods_name_row{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20rpx;
+    border-bottom: 2rpx rgba(102, 102, 102,.2) solid;
+    .goods_name{
+        font-size: 30rpx;
+        font-weight: bold;
+    }
+    .goods_collect{
+        font-size: 25rpx;
+    }
+    .goods_price{
+        color: red;
+        font-size: 30rpx;
+        font-weight: bold;
+        margin-top: 10rpx;
+    }
+    .goods_oldprice{
+        color: green;
+        font-size: 25rpx;
+        font-weight: bold;
+    }
+}
+.goods_times{
+    font-size: 25rpx;
+    padding: 20rpx;
+}
+.goods_Dolist{
+    width: 100%;
+    height: 250rpx;
+    .Dolist_top{
+        height: 50rpx;
+        padding: 20rpx;
+        display: flex;
+        align-items: center;
+        position: relative;
+        :first-child{
+        font-size: 30rpx;
+        font-weight: bold;
+        }
+        :last-child{
+            position: absolute;
+            right: 20rpx;
+        }
+    }
+    .Dolist_content{
+        background-color: rgba(180, 180, 180, 0.5);
+        height: 200rpx;
+        display: flex;
+        padding: 10rpx;
+        box-sizing: border-box;
+        .content_list{
+            margin: 4rpx;
+            text-align: center;
+            width: 200rpx;
+            height: 100%;
+            image{
+                width: 150rpx;
+            }
+            view{
+                font-size: 25rpx;
+            }
+        }
+    }
+}
+.other{
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+    .other_top{
+        font-size: 30rpx;
+        font-weight: bold;
+    }
+    .other_content{
+        display: flex;
+        view{
+            flex: 1;
+        }
+    }
+}
+
+// 底部tabbar
+.bottom_tarbar{
+    border-top: 1rpx  rgba(180, 180, 180, 0.7) solid;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    .tarbar_left{
+        flex: 1;
+    }
+    .tarbar_right{
+        border-radius: 40rpx;
+        background-color: green;
+        height: 90%;
+        width: 40%;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        line-height: 90rpx;
+        color: white;
+        font-size: 30rpx;
+    }
+}

@@ -5,9 +5,58 @@
     circular="{{true}}"
     indicator-dots="{{true}}">
         <swiper-item 
-        wx:for="{{}}"
-        wx:key="">
-            <image mode="widthFix" src="{{}}"/>
+        wx:for="{{goodsObj.image}}"
+        wx:key="image_id">
+            <image mode="widthFix" src="{{item.image_src}}"/>
         </swiper-item>
     </swiper>
+</view>
+<view class="goods_name_row">
+    <view class="goods_name">{{goodsObj.name}}</view>
+    <view class="goods_collect">{{goodsObj.unit}}</view>
+    <view class="goods_price">￥{{goodsObj.price}}</view>
+    <view class="goods_oldprice">￥{{goodsObj.oldprice}}</view>
+</view>
+<view class="goods_times">最快15:46-16:15送达</view>
+<view class="goods_Dolist">
+    <view class="Dolist_top">
+        <view >推荐做法</view>
+        <navigator >...</navigator>
+    </view>
+    <scroll-view scroll-x enable-flex class="Dolist_content">
+        <navigator  class="content_list"
+        wx:for="{{Dolist}}"
+        wx:key="index">
+            <image mode="widthFix" src="{{item.image_src}}"/>
+            <view >{{item.name}}</view>
+        </navigator>
+    </scroll-view> 
+</view>
+<view class="other">
+    <view class="other_top">规格</view>
+    <view class="other_content">
+        <view >净含量</view>
+        <view >{{goodsObj.number}}</view>
+    </view>
+    <view class="other_content">
+        <view >保存条件</view>
+        <view >{{goodsObj.tip}}</view>
+    </view>
+    <view class="other_content">
+        <view >保质期</view>
+        <view >{{goodsObj.day}}</view>
+    </view>
+</view>
+<view >
+    <view wx:for="{{goodsObj.image}}">
+        <image mode="widthFix" src="{{item.image_src}}" />
+    </view>
+   
+</view>
+
+
+<!-- 底部栏 -->
+<view class="bottom_tarbar">
+    <navigator class="tarbar_left" open-type="switchTab" url="/pages/cart/index">购物车</navigator>
+    <navigator  class="tarbar_right" bindtap="handleCartAdd">加入购物车</navigator>
 </view>

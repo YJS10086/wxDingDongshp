@@ -12,8 +12,8 @@
 .index_cate {
   display: flex;
   flex-wrap: wrap;
-  width: 750rpx;
-  height: 280rpx;
+  width: 100%;
+  height: 300rpx;
 }
 .index_cate navigator {
   padding: 10rpx;
@@ -21,11 +21,11 @@
   width: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .index_cate navigator image {
-  width: 100rpx;
+  width: 90rpx;
   border-radius: 50%;
 }
 .index_cate navigator label {

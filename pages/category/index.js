@@ -141,7 +141,7 @@ Page({
     scrolltop:0
   },
   Cates:[],
-  onLoad:function(){
+  onLoad:function(e){
     //使用缓存技术
     const Cates=wx.getStorageSync("cates");
     if(!Cates){
